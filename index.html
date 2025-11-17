@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <style>
-/* === RESET === */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +16,12 @@
   scroll-behavior: smooth;
 }
 
-/* === GLOBAL === */
+
 :root {
-  --primary: #7da2a9;     /* muted teal-blue */
-  --secondary: #b8bedd;   /* soft lavender-gray */
-  --accent: #50586c;      /* deep slate */
-  --bg: #f7f8fa;          /* subtle off-white */
+  --primary: #5b71b9;     
+  --secondary: #9fbaf7;   
+  --accent: #313030;      
+  --bg: #f7f8fa;          
   --text-dark: #1f1f1f;
   --text-light: #6b6b6b;
 }
@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 }
 
-/* === NAVBAR === */
+
 header {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
@@ -89,10 +89,10 @@ nav {
   width: 100%;
 }
 
-/* === HOME === */
+
 .home {
   min-height: 500px;
-  background: linear-gradient(120deg, #a2bce0, #cdd5d1);
+  background: linear-gradient(120deg, #2d70ce, #cdd5d1);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -138,7 +138,6 @@ nav {
   transform: translateY(-3px);
 }
 
-/* === ABOUT === */
 .about {
   padding: 80px 10%;
   background: var(--bg);
@@ -179,7 +178,7 @@ nav {
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* === SKILLS === */
+
 .skills {
   padding: 80px 10%;
   background: var(--secondary);
@@ -226,8 +225,30 @@ nav {
   padding-left: 20px;
   color: var(--text-light);
 }
+.skills-list {
+  padding-left: 0;
+  list-style: none;
+}
 
-/* === PROJECTS === */
+.skills-list li {
+  background: #eef1f6;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1.5px solid transparent;
+}
+
+.skills-list li:hover {
+  background: #dfe6f3;
+  border-color: var(--primary);
+  transform: translateX(8px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
 .projects {
   padding: 80px 10%;
   background: var(--bg);
@@ -296,11 +317,11 @@ nav {
   background: var(--accent);
 }
 
-/* === CONTACT === */
+
 .contact {
   padding: 80px 10%;
-  background: linear-gradient(120deg, #cdd5d1, #a2bce0);
-  color: #fff;
+  background: linear-gradient(120deg, #4576bb, #c5e0ff);
+  color: #fff5f5;
   text-align: center;
 }
 
@@ -320,7 +341,7 @@ nav {
 }
 
 .contact a {
-  color: #fff;
+  color: #006898;
   text-decoration: underline;
   transition: 0.3s;
 }
@@ -329,7 +350,7 @@ nav {
   color: #222;
 }
 
-/* === FOOTER === */
+
 footer {
   text-align: center;
   padding: 20px;
@@ -338,35 +359,10 @@ footer {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
-/* === HOVER LIST FOR TECHNICAL SKILLS === */
-.skills-list {
-  padding-left: 0;
-  list-style: none;
-}
-
-.skills-list li {
-  background: #eef1f6;
-  margin: 8px 0;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 1rem;
-  color: var(--text-dark);
-  cursor: pointer;
-  transition: 0.3s ease;
-  border: 1.5px solid transparent;
-}
-
-.skills-list li:hover {
-  background: #dfe6f3;
-  border-color: var(--primary);
-  transform: translateX(8px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
-}
-
 
 </style>
 <body>
-  <!-- ===== Navigation ===== -->
+  
   <header>
     <nav>
       <h1 class="logo">Jaswant Kumar</h1>
@@ -380,7 +376,7 @@ footer {
     </nav>
   </header>
 
-  <!-- ===== Home Section ===== -->
+  
   <section id="home" class="home">
     <div class="intro">
       <h2>Hello, I'm <span>Jaswant Kumar</span></h2>
@@ -391,11 +387,10 @@ footer {
     </div>
   </section>
 
-  <!-- ===== About Section ===== -->
-  <section id="about" class="about">
+    <section id="about" class="about">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="IMG-20251110-WA0029.jpg" alt="Jaswant Photo" />
+      <img src="img.jpg" alt="Jaswant Photo" />
       <p>
         I'm a B.Tech CSE student at Delhi Technological University with an interest in web development,
         software engineering, and digital creativity. I love building user-friendly applications and designing visually appealing websites.
@@ -403,7 +398,7 @@ footer {
     </div>
   </section>
 
-  <!-- ===== Skills Section ===== -->
+  
   <section id="skills" class="skills">
     <h2>Skills & Education</h2>
     <div class="skills-grid">
@@ -445,8 +440,7 @@ footer {
     </div>
   </section>
 
-  <!-- ===== Projects Section ===== -->
-  <section id="projects" class="projects">
+    <section id="projects" class="projects">
     <h2>My Projects</h2>
     <div class="project-grid">
       <div class="project-card">
@@ -463,7 +457,7 @@ footer {
     </div>
   </section>
 
-  <!-- ===== Contact Section ===== -->
+  
   <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <p>Let's connect! Feel free to reach out through any platform below.</p>
@@ -475,7 +469,7 @@ footer {
     </ul>
   </section>
 
-  <!-- ===== Footer ===== -->
+  
   <footer>
     <p>© 2025 Jaswant Kumar | All Rights Reserved</p>
   </footer>
